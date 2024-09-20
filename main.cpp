@@ -8,13 +8,12 @@ using namespace std;
 int main()
 {
     char str[] = "This is an example string";
+    char* ptr = strtok(str, " ");
 
-    char* ptr = str;
-
-    while(ptr=strtok(ptr, " "))
+    while(ptr)
     {
         printf("%s\n", ptr);
-        ptr = strstr(ptr, " ");
+        ptr = strtok(NULL, " ");
     }
 
     return 0;
